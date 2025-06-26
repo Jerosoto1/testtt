@@ -1,22 +1,9 @@
-function toggleCarta() {
-  const carta = document.getElementById('carta');
-  const fotos = document.querySelectorAll('.foto');
-
-  fotos.forEach(foto => {
-    foto.classList.add('animar');
-    setTimeout(() => {
-      foto.classList.remove('animar');
-    }, 500);
-  });
-
-  if (carta.style.display === 'block') {
-    carta.style.display = 'none';
-  } else {
-    carta.style.display = 'block';
-  }
+function toggleCarta(id) {
+  const carta = document.getElementById(id);
+  carta.style.display = carta.style.display === 'block' ? 'none' : 'block';
 }
 
-function mostrarMensaje() {
-  const mensaje = document.getElementById('mensaje');
-  mensaje.style.display = 'block';
+function mostrarMensaje(id) {
+  const mensaje = document.getElementById(id);
+  mensaje.style.display = mensaje.style.display === 'block' ? 'none' : 'block';
 }

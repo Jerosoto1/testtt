@@ -5,25 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Novia <3</title>
   <link rel="shortcut icon" href="heart.png" type="image/x-icon">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1></h1>
+
+  <h1>Para ti, my love ❤️</h1>
+
+  <div class="video">
+    <video src="./VID-20250316-WA0019.mp4" controls width="300"></video>
+  </div>
 
   <div class="galeria">
-    <img src="mirandayyo.jpg" class="foto" onclick="toggleCarta()" alt="Fotito">
+    <img src="mirandayyo.jpg" class="foto" onclick="toggleCarta('carta1')" alt="Foto juntos">
+    <img src="./IMG-20250316-WA0019.jpg" class="foto" onclick="toggleCarta('carta2')" alt="Tu carita hermosa">
   </div>
 
   <div class="carta-container">
-    <div class="carta" id="carta">
-      <p>No podia cerrar este modulo y este mes estudiando sin saber que te hice algo a ti, asi fuera super sencillo</p>
+    <div class="carta" id="carta1">
+      <p>No podía cerrar este módulo sin hacerte algo, así fuera súper sencillo. Gracias por estar conmigo.</p>
+    </div>
+    <div class="carta" id="carta2">
+      <p>Esta foto me hace DEMASIADO FELIZ cada vez que la veo. TE AMO INFINITO</p>
     </div>
   </div>
 
   <div class="sorpresa">
-    <button onclick="mostrarMensaje()">🎁 Toca aquí</button>
-    <p id="mensaje" class="oculto">Te amo hasta el infinito y mas allá...💌</p>
+    <button onclick="mostrarMensaje('mensaje1')">🎁 Toca este regalito</button>
+    <p id="mensaje1" class="oculto">Te amo hasta el infinito y más allá... 💌</p>
+  </div>
+
+  <div class="sorpresa">
+    <button onclick="mostrarMensaje('mensaje2')">🎁 Otro regalito</button>
+    <p id="mensaje2" class="oculto">Eres mi lugar favorito, mi paz, mi alma gemela y mi todo. 💘</p>
   </div>
 
   <script src="script.js"></script>
