@@ -15,27 +15,42 @@
     <video src="./VID-20250316-WA0019.mp4" controls width="300"></video>
   </div>
 
-  <div class="galeria">
-    <img src="mirandayyo.jpg" class="foto" onclick="toggleCarta('carta1')" alt="Foto juntos">
-    <img src="./IMG-20250316-WA0019.jpg" class="foto" onclick="toggleCarta('carta2')" alt="Tu carita hermosa">
+  <div class="video">
+    <video src="./VID-20250316-WA0011.mp4" controls width="300"></video>
   </div>
 
-  <div class="carta-container">
-    <div class="carta" id="carta1">
-      <p>No podía cerrar este módulo sin hacerte algo, así fuera súper sencillo. Gracias por estar conmigo.</p>
+  <div class="galeria">
+
+    <div class="foto-contenedor">
+      <img src="mirandayyo.jpg" class="foto" onclick="toggleCarta('carta1')" alt="Foto juntos">
+      <div class="carta" id="carta1">
+        <p>No podía cerrar este módulo sin hacerte algo, así fuera súper sencillo. Gracias por estar conmigo.</p>
+      </div>
     </div>
-    <div class="carta" id="carta2">
-      <p>Esta foto me hace DEMASIADO FELIZ cada vez que la veo. TE AMO INFINITO</p>
+
+    <div class="foto-contenedor">
+      <img src="./IMG-20250316-WA0019.jpg" class="foto" onclick="toggleCarta('carta2')" alt="Tu carita hermosa">
+      <div class="carta" id="carta2">
+        <p>Esta foto me hace DEMASIADO FELIZ cada vez que la veo. TE AMO INFINITO</p>
+      </div>
     </div>
+
+    <div class="foto-contenedor">
+      <img src="./IMG-20250316-WA0018.jpg" class="foto" onclick="toggleCarta('carta3')" alt="Recuerdo especial">
+      <div class="carta" id="carta3">
+        <p>Esta foto me derrite el corazón... Me encanta tu carita. Gracias por ser tú 💖</p>
+      </div>
+    </div>
+
   </div>
 
   <div class="sorpresa">
-    <button onclick="mostrarMensaje('mensaje1')">🎁 Toca este regalito</button>
+    <button class="btn" onclick="mostrarMensaje('mensaje1')">🎁 Toca este regalito</button>
     <p id="mensaje1" class="oculto">Te amo hasta el infinito y más allá... 💌</p>
   </div>
 
   <div class="sorpresa">
-    <button onclick="mostrarMensaje('mensaje2')">🎁 Otro regalito</button>
+    <button class="btn" onclick="mostrarMensaje('mensaje2')">🎁 Otro regalito</button>
     <p id="mensaje2" class="oculto">Eres mi lugar favorito, mi paz, mi alma gemela y mi todo. 💘</p>
   </div>
 
