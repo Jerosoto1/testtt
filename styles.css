@@ -1,26 +1,51 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #ffffff, #ee9ca7);
+  background: linear-gradient(135deg, #ffffff, #d9d9d9, #bfbfbf);
+  background-attachment: fixed;
   color: #000000;
   text-align: center;
-  padding: 40px;
+  padding: 20px;
 }
 
 h1 {
-  font-size: 3em;
-  color: #ff0066;
+  font-size: 2.2em;
+  color: #444;
   margin-bottom: 30px;
-}
-
-.video {
-  margin-bottom: 20px;
 }
 
 .galeria {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
+}
+
+.media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+}
+
+.media img,
+.media video {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.mensaje {
+  font-size: 1em;
+  color: #444;
+  margin-top: 10px;
+  font-style: italic;
+  min-height: 1.5em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.mensaje.visible {
+  opacity: 1;
 }
 
 .foto-contenedor {
@@ -28,10 +53,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   max-width: 300px;
+  margin: 20px auto;
 }
 
 .foto {
-  width: 300px;
+  width: 100%;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   cursor: pointer;
@@ -60,23 +86,17 @@ h1 {
 .oculto {
   display: none;
   margin-top: 20px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #fff;
-  background-color: #ff66b2;
+  background-color: #666;
   padding: 20px;
   border-radius: 15px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Botón con borde brillante */
 .btn {
   position: relative;
-  padding: 15px 30px;
+  padding: 12px 25px;
   background: #000;
   color: white;
   font-size: 1em;
@@ -94,7 +114,7 @@ h1 {
   left: -3px;
   right: -3px;
   bottom: -3px;
-  background: linear-gradient(45deg, #FF0000, #ff7300, #FFFB00, #48FF00, #00FFD5, #FF00C8, #FF0000);
+  background: linear-gradient(45deg, #999, #bbb, #ddd, #bbb, #999);
   background-size: 400%;
   z-index: -1;
   filter: blur(6px);
@@ -111,5 +131,35 @@ h1 {
 video {
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
+  max-width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#btnFinal {
+  transition: transform 0.3s ease;
+}
+
+#mensajeFinal {
+  font-size: 1.5em;
+  color: #fff;
+  background: linear-gradient(45deg, #444, #888);
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
